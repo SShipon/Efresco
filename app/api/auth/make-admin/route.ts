@@ -16,3 +16,5 @@ export async function POST(req: Request) {
 
   return NextResponse.json({ message: "User Updated to Admin!", user }, { status: 200 });
 }
+
+//app/api/auth/[...nextauth]/route.ts
