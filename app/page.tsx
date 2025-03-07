@@ -5,3 +5,4 @@ export default function Home() {
     <div>Hello BD_Restaurant</div>
   )
 }
+
