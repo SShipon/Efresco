@@ -6,19 +6,31 @@ import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string>("");
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    setError(""); // আগের error মুছে ফেলবে
 
-    const result = await signIn("credentials", { email, password, redirect: false });
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
-    if (result?.error) {
-      setError("Invalid email or password");
-    } else {
-      router.push("/dashboard");
+    if (!email || !password) {
+      setError("Email এবং Password দিতে হবে!");
+      return;
+    }
+
+    try {
+      const result = await signIn("credentials", { email, password, redirect: false });
+
+      if (result?.error) {
+        setError("Invalid email or password");
+      } else {
+        router.push("/dashboard");
+      }
+    } catch (err) {
+      setError("Something went wrong. Try again!");
     }
   };
 
@@ -27,8 +39,8 @@ export default function LoginPage() {
       <h2 className="text-2xl font-bold mb-4">Login</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleLogin} className="flex flex-col gap-4">
-        <input name="email" type="email" placeholder="Email" className="border p-2 rounded" />
-        <input name="password" type="password" placeholder="Password" className="border p-2 rounded" />
+        <input name="email" type="email" placeholder="Email" className="border p-2 rounded" required />
+        <input name="password" type="password" placeholder="Password" className="border p-2 rounded" required />
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">Login</button>
       </form>
     </div>
