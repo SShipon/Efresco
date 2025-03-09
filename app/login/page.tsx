@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
@@ -10,7 +9,7 @@ export default function LoginPage() {
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(""); // আগের error মুছে ফেলবে
+    setError("");
 
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
@@ -21,16 +20,24 @@ export default function LoginPage() {
       return;
     }
 
-    try {
-      const result = await signIn("credentials", { email, password, redirect: false });
+    const result = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
 
-      if (result?.error) {
-        setError("Invalid email or password");
+    if (result?.error) {
+      setError("Invalid email or password");
+    } else {
+      // ✅ User Session Check করে Redirect করবে
+      const res = await fetch("/api/auth/session");
+      const session = await res.json();
+
+      if (session?.user?.role === "admin") {
+        router.push("/dashboard"); // ✅ Admin হলে Dashboard এ যাবে
       } else {
-        router.push("/dashboard");
+        router.push("/"); // ✅ সাধারণ User হলে Home Page এ যাবে
       }
-    } catch (err) {
-      setError("Something went wrong. Try again!");
     }
   };
 

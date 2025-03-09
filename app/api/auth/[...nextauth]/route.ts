@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
@@ -12,15 +13,21 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        console.log("🔹 Received Credentials:", credentials); // ✅ Debugging
-
         try {
-          const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, credentials);
-          console.log("✅ API Response:", res.data); // ✅ Backend response check
+          const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+            email: credentials?.email,
+            password: credentials?.password,
+          });
 
-          return res.data; // Ensure API returns { name, email, role, token }
-        } catch (error: any) {
-          console.error("❌ Login Error:", error.response?.data || error.message);
+          if (res.data) {
+            return {
+              name: res.data.name,
+              email: res.data.email,
+              role: res.data.role, // ✅ Ensure role is included
+            };
+          }
+          return null;
+        } catch (error) {
           throw new Error("Invalid email or password");
         }
       },
@@ -37,7 +44,7 @@ const handler = NextAuth({
       return token;
     },
     async session({ session, token }) {
-      session.user = token.user;
+      session.user = token.user as any;
       return session;
     },
   },

@@ -1,17 +1,25 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { withAuth } from "next-auth/middleware";
 
-export function middleware(req: NextRequest) {
-  const token = req.cookies.get("next-auth.session-token")?.value;
-  const url = req.nextUrl.pathname;
+export default withAuth(
+  function middleware(req) {
+    const url = req.nextUrl;
+    const role = req.nextauth.token?.user?.role;
 
-  if (!token && url.startsWith("/dashboard")) {
-    return NextResponse.redirect(new URL("/login", req.url));
+    // ✅ সাধারণ User Dashboard এ ঢুকতে পারবে না
+    if (url.pathname.startsWith("/dashboard") && role !== "admin") {
+      return NextResponse.redirect(new URL("/", req.url)); // সাধারণ User হোমপেজে যাবে
+    }
+
+    return NextResponse.next();
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => !!token, // ✅ লগইন করা থাকলে অনুমতি দেবে
+    },
   }
-
-  return NextResponse.next();
-}
+);
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/dashboard/:path*"], // ✅ শুধু Dashboard-এ Middleware চালাবে
 };

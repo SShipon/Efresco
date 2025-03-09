@@ -20,6 +20,14 @@ export default function Dashboard() {
       <p>Welcome, {session.user?.name}!</p>
       <p>Your Role: {session.user?.role}</p>
 
+      {/* যদি User "admin" হয় তাহলে Admin Panel দেখাবে */}
+      {session.user?.role === "admin" && (
+        <div className="mt-4 p-4 border rounded bg-gray-100">
+          <h3 className="text-xl font-bold">Admin Panel</h3>
+          <p>Here you can manage users, orders, and settings.</p>
+        </div>
+      )}
+
       <button
         onClick={() => signOut()}
         className="mt-4 bg-red-500 text-white p-2 rounded"
