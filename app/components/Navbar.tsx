@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import { BiCartAdd, BiSearch } from "react-icons/bi";
 import { TbTruckDelivery } from "react-icons/tb";
+import Image from "next/image";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -11,7 +12,8 @@ export default function Navbar() {
   return (
     <nav className="bg-blue-500 border-b border-b-white p-4 text-white flex justify-between items-center">
       <Link href="/" className="text-lg font-bold">
-        <img src='logo-white.svg' alt='logo' />
+        <Image width={150} // Set your desired width
+ height={50} src='logo-white.svg' alt='logo' />
       </Link>
 
       {/* Menu */}
@@ -46,7 +48,8 @@ export default function Navbar() {
         </button>
 
         <div>
-          <img src='bar-white.svg' alt='bar' />
+          <Image  width={40} // Set your desired width
+ height={50}  src='bar-white.svg' alt='bar' />
         </div>
 
         {/* Login & Logout */}
