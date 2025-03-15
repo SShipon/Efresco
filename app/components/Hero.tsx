@@ -15,6 +15,11 @@ const heroContents = [
     subtitle: 'start your order just only $25.00',
     image: 'pizza-super.png',
   },
+  {
+    title: 'super  pizza Big',
+    subtitle: 'start your order just only Pizza price $27.00',
+    image: 'burger.png',
+  },
 ];
 
 export default function Hero() {
@@ -22,20 +27,19 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex(prevIndex => (prevIndex + 1) % heroContents.length);
-    }, 5000); // Change every 5 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % heroContents.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className='bg-[#d11525] relative w-full h-screen flex items-center justify-center'>
-      {/* Background Shape or Overlay (optional) */}
       <div className='absolute inset-0'></div>
 
       <div className='relative w-full max-w-6xl mx-auto px-6 md:flex md:items-center md:justify-between'>
-        {/* Text Section */}
+
         <motion.div
-          key={index} // Helps with animation re-renders
+          key={index}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
@@ -51,21 +55,21 @@ export default function Hero() {
           </button>
         </motion.div>
 
-        {/* <h1 data-animation="fadeInUp" data-duration="1" data-delay=".4s" class="" style="animation: 0.4s ease 0s 1 normal none running fadeInUp;">awesome delicious pizza</h1> */}
 
-        {/* Image Section */}
         <motion.div
-          key={`image-${index}`} // Helps with animation re-renders
+          key={`image-${index}`}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.2 }}
           transition={{ duration: 0.6 }}
           className='md:w-1/2 flex justify-center'
         >
-          <img
+          <motion.img
             src={heroContents[index].image}
             alt='Food Image'
             className='w-4/5 h-4/5 object-contain drop-shadow-lg'
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
           />
         </motion.div>
       </div>
