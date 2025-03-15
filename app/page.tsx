@@ -7,7 +7,7 @@ import DayDeal from './components/DayDeal'
 
 export default function Home() {
   return (
-    <div className='p-2'>
+    <div>
       <Hero />
       <Founder />
       <Marquee />
