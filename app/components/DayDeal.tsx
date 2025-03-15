@@ -12,7 +12,7 @@ export default function DayDeal() {
           Deal Of The Day
         </h4>
         <h2 className='text-[42px] lg:text-[54px] font-extrabold uppercase'>
-          today's the hamburger' day
+          today&apos;s the hamburger &apos; day
         </h2>
         <div className='flex gap-x-2 py-3 items-end'>
           <h4 className='text-xl font-semibold capitalize'>
@@ -23,7 +23,7 @@ export default function DayDeal() {
           </h2>
         </div>
         <p className='py-5'>
-          Savor the perfect symphony of flavors It's the perfect dining experience where Experience quick and efficient with our signature hamburger, a culinary
+          Savor the perfect symphony of flavors It&apos;s the perfect dining experience where Experience quick and efficient with our signature hamburger, a culinary
         </p>
         <button className='flex gap-x-2 uppercase border border-white px-5 py-3 rounded'>
           <TbTruckDelivery size={24} />
