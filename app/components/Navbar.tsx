@@ -26,13 +26,13 @@ export default function Navbar() {
             <Link href="/shop">shop</Link>
           </li>
           <li>
-            <Link href="/">blog</Link>
+            <Link href="/blog">blog</Link>
           </li>
           <li>
             <Link href="/shop">pages</Link>
           </li>
           <li>
-            <Link href="/">contact</Link>
+            <Link href="/contact">contact</Link>
           </li>
         </ul>
 
