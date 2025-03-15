@@ -10,29 +10,43 @@ export default function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <nav className="bg-blue-500 border-b border-b-white p-4 text-white flex justify-between items-center">
+    <nav className="bg-[#d12525] border-b border-b-slate-500 px-5 py-7 text-white flex justify-between items-center">
       <Link href="/" className="text-lg font-bold">
-        <Image width={150} // Set your desired width
- height={50} src='logo-white.svg' alt='logo' />
+        <Image
+          width={150}
+          height={50}
+          src='logo-white.svg'
+          alt='logo'
+        />
       </Link>
 
       {/* Menu */}
       <div className='flex items-center gap-x-5'>
         <ul className='flex gap-x-5 uppercase'>
-          <li>
-            <Link href="/">home</Link>
+          <li className='hover:text-[#ffb936]'>
+            <Link href="/">
+              <h4 className='text-lg font-semibold'>home</h4>
+            </Link>
           </li>
-          <li>
-            <Link href="/shop">shop</Link>
+          <li className='hover:text-[#ffb936]'>
+            <Link href="/shop">
+              <h4 className='text-lg font-semibold'>shop</h4>
+            </Link>
           </li>
-          <li>
-            <Link href="/blog">blog</Link>
+          <li className='hover:text-[#ffb936]'>
+            <Link href="/blog">
+              <h4 className='text-lg font-semibold'>blog</h4>
+            </Link>
           </li>
-          <li>
-            <Link href="/shop">pages</Link>
+          <li className='hover:text-[#ffb936]'>
+            <Link href="/shop">
+              <h4 className='text-lg font-semibold'>pages</h4>
+            </Link>
           </li>
-          <li>
-            <Link href="/contact">contact</Link>
+          <li className='hover:text-[#ffb936]'>
+            <Link href="/contact">
+              <h4 className='text-lg font-semibold'>contact</h4>
+            </Link>
           </li>
         </ul>
 
@@ -42,14 +56,18 @@ export default function Navbar() {
           <BiCartAdd size={24} />
         </div>
 
-        <button className='flex gap-x-2 uppercase border border-white px-5 py-3 rounded'>
+        <button className='flex gap-x-2 uppercase border border-white px-5 py-3 hover:bg-white hover:text-black cursor-pointer'>
           <TbTruckDelivery size={24} />
           <p>order now</p>
         </button>
 
         <div>
-          <Image  width={40} // Set your desired width
- height={50}  src='bar-white.svg' alt='bar' />
+          <Image
+            width={30}
+            height={30}
+            src='bar-white.svg'
+            alt='bar'
+          />
         </div>
 
         {/* Login & Logout */}

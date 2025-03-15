@@ -1,8 +1,8 @@
 export default function Founder() {
   return (
-    <div className='flex justify-center items-center gap-x-16 py-20 max-w-[880px] mx-auto'>
-      <div>
-        <img src='founder.jpg' alt='founder' />
+    <div className='flex justify-center items-center gap-x-8 py-20 max-w-[880px] mx-auto'>
+      <div className='w-2/3'>
+        <img className='w-3/4 justify-self-center' src='founder.jpg' alt='founder' />
       </div>
       <div className='w-9/10'>
         <h3 className='text-[#d12525] pb-5 uppercase text-xl font-semibold'>Learn Something Foodking</h3>

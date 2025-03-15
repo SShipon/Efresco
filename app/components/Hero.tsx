@@ -145,7 +145,7 @@ export default function Hero() {
             }
           </h1>
           <h4 className='capitalize mt-4 text-2xl text-white font-semibold py-5'>{heroContents[index].subtitle}</h4>
-          <button className='uppercase mt-6 px-12 py-5 bg-[#ffb936] transition-all duration-3000 ease hover:bg-white cursor-pointer text-md font-semibold shadow-lg flex items-center gap-x-2'>
+          <button className='uppercase mt-6 px-12 py-5 bg-[#ffb936] hover:bg-white cursor-pointer text-md font-semibold shadow-lg flex items-center gap-x-2'>
             order now <FaArrowRight size={20} />
           </button>
         </motion.div>
@@ -162,7 +162,7 @@ export default function Hero() {
           <motion.img
             src={heroContents[index].image}
             alt='Food Image'
-            className='object-contain drop-shadow-lg'
+            className='object-contain drop-shadow-lg -mb-48'
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
           />
