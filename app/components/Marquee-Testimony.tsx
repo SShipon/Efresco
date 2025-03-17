@@ -1,31 +1,24 @@
 import Image from "next/image";
 
-export default function Marquee() {
+export default function MarqueeTestimony() {
   return (
     <div className="overflow-hidden whitespace-nowrap">
       <div className='marquee flex justify-center items-center uppercase text-[130px]'>
-        <div>popular dishes</div>
+        <div>Clients Testimonials</div>
         <Image
           width={150} // Set your desired width
           height={50}
           src='star.svg'
           alt='star'
         />
-        <div>delicious food</div>
+        <div>Food Reviews</div>
         <Image
           width={150} // Set your desired width
           height={50}
           src='star.svg'
           alt='star'
         />
-        <div>burger king</div>
-        <Image
-          width={150} // Set your desired width
-          height={50}
-          src='star.svg'
-          alt='star'
-        />
-        <div>popular</div>
+        <div>Our</div>
       </div>
     </div>
   )

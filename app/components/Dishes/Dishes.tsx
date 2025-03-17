@@ -2,14 +2,14 @@ import { FaStar } from "react-icons/fa";
 import Image from 'next/image'; 
 
 const dishes = [
-  { id: 1, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 2, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 3, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 4, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 5, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 6, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 7, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
-  { id: 8, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5000 },
+  { id: 1, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 2, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 3, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 4, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 5, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 6, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 7, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
+  { id: 8, name: 'Single Fresh Burger', price: 25.59, image: '/burger.png', rating: 5, reviews: 5 },
 ];
 
 export default function Dishes() {

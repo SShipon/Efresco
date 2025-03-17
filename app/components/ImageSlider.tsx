@@ -34,9 +34,9 @@ export default function ImageSlider() {
   return (
     <div
       ref={sliderRef}
-      className="relative w-full min-h-[400px] lg:min-h-[500px] overflow-hidden bg-black flex items-center"
+      className="relative w-full min-h-[400px] lg:min-h-[500px] overflow-hidden flex items-center"
     >
-      <AnimatePresence custom={index} mode="wait">
+      <AnimatePresence mode="wait">
         <motion.img
           key={index}
           src={images[index]}

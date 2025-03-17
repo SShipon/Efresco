@@ -31,22 +31,32 @@ export default function ClassicProducts() {
   ];
 
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-x-4 max-w-[1200px] mx-auto border-b border-b-[#d12525]'>
-      {
-        products.map((product, index) => (
-          <div key={index} className='relative flex flex-col items-center border-r border-r-[#d12525] py-16'>
-            <Image src={product.image} alt='pizza' width={240} height={240} />
-            <h3 className='uppercase text-2xl text-center font-bold py-7 hover:text-[#d12525] cursor-pointer'>{product.title}</h3>
-            <button className='uppercase cursor-pointer text-md font-semibold shadow-lg flex items-center gap-x-2 hover:text-[#d12525] hover:underline'>
-              order now <FaArrowRight size={20} />
-            </button>
-            <img className='absolute left-2 top-5.5' src='vector-red.png' alt='vector' />
-            <h4 className='absolute left-9 top-15 text-white text-3xl font-semibold uppercase'>
-              {product.tag}
-            </h4>
-          </div>
-        ))
-      }
+    <section className='border-b border-b-[#d12525]'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-x-4 max-w-[1200px] mx-auto'>
+        {
+          products.map((product, index) => (
+            <div key={index} className='min-h-[550px] relative flex flex-col items-center border-r border-r-[#d12525] py-16'>
+              <Image
+                src={product.image}
+                alt='pizza'
+                width={250}
+                height={250}
+              />
+              <h3 className='uppercase text-2xl text-center font-bold py-7 hover:text-[#d12525] cursor-pointer'>
+                {product.title}
+              </h3>
+              <button className='uppercase cursor-pointer text-md font-semibold shadow-lg flex items-center gap-x-2 hover:text-[#d12525] hover:underline'>
+                order now <FaArrowRight size={20} />
+              </button>
+              <div className="bg-[url('/box.png')] bg-cover w-20 h-20 absolute -left-1 top-10">
+                <h4 className='absolute left-3 top-6 text-white text-2xl font-semibold uppercase'>
+                  {product.tag}
+                </h4>
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </section>
-  )
+  );
 }
