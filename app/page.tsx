@@ -4,6 +4,7 @@ import Marquee from './components/Marquee'
 import TopProducts from './components/TopProducts'
 import Dishes from './components/Dishes/Dishes'
 import DayDeal from './components/DayDeal'
+import ClassicProducts from './components/ClassicProducts'
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Dishes />
       <Marquee />
       <DayDeal />
+      <ClassicProducts />
+      <Marquee />
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import { TbTruckDelivery } from "react-icons/tb";
+import ImageSlider from "./ImageSlider";
 // import Slider from "./Slider";
 
 export default function DayDeal() {
   return (
-    <section className='flex flex-col lg:flex-row justify-center'>
-      {/* Slider div */}
-      {/* <Slider /> */}
+    <section className='flex flex-col lg:flex-row items-stretch pt-16'>
+      <ImageSlider />
       {/* Deal div */}
       <div className="text-white px-8 py-12 bg-[#d12525] bg-[url('/shape-bg.png')] bg-cover bg-center">
         <h4 className='text-xl font-semibold'>
