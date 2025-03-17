@@ -70,7 +70,7 @@ export default function Hero() {
             className='w-4/5 h-4/5 object-contain drop-shadow-lg'
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
-          />
+          />  
         </motion.div>
       </div>
     </div>

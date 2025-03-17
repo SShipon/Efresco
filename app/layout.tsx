@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, } from "next/font/google";
 import "./globals.css";
 import SessionProvider from "./components/SessionProvider";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -37,7 +38,9 @@ export default function RootLayout({
         <SessionProvider>
           {/* ✅ Navbar will be inside the SessionProvider */}
           <Navbar />  
+         
           {children}
+          <Footer />
         </SessionProvider>
       </body>
     </html>
