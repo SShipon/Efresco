@@ -10,6 +10,7 @@ export default function Navbar() {
   const { data: session } = useSession();
 
   return (
+    // <nav className="border-b border-b-slate-500 px-5 py-7 text-white flex justify-between items-center">
     <nav className="bg-[#d12525] border-b border-b-slate-500 px-5 py-7 text-white flex justify-between items-center">
       <Link href="/" className="text-lg font-bold">
         <Image

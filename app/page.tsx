@@ -8,6 +8,7 @@ import ClassicProducts from './components/ClassicProducts'
 import MarqueeTestimony from './components/Marquee-Testimony'
 import Testimonials from './components/Testimonials'
 import Services from './components/Services'
+import Subscribe from './components/Subscribe'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <MarqueeTestimony />
       <Testimonials />
       <Services />
+      <Subscribe />
     </div>
   )
 }

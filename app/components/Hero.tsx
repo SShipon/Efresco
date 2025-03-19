@@ -109,9 +109,9 @@ export default function Hero() {
   }, []);
 
   return (
+    // <section className="bg-[url('/hero-bg.jpg')] bg-cover bg-top relative w-full h-screen flex items-center justify-center">
     <section className='bg-[#d12525] relative w-full h-screen flex items-center justify-center'>
-      <div className='absolute inset-0'></div>
-
+      {/* <div className='absolute inset-0'></div> */}
 
       <div className='relative w-full max-w-6xl mx-auto px-6 md:flex md:items-center md:justify-between md:gap-x-5'>
       

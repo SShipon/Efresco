@@ -42,3 +42,15 @@ body {
   -webkit-text-fill-color: transparent;
   font-style: italic;
 }
+/* subscribe */
+.subscribe-section:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(180deg, #f4f1ea 67.2%, hsla(42, 31%, 94%, 0));
+}
