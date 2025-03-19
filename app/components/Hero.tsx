@@ -164,7 +164,7 @@ export default function Hero() {
             alt='Food Image'
             className='object-contain drop-shadow-lg -mb-48'
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+            transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
           />
         </motion.div>
       </div>
