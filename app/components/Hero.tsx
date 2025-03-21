@@ -113,21 +113,20 @@ export default function Hero() {
     <section className='bg-[#d12525] relative w-full h-screen flex items-center justify-center'>
       {/* <div className='absolute inset-0'></div> */}
 
-      <div className='relative w-full max-w-6xl mx-auto px-6 md:flex md:items-center md:justify-between md:gap-x-5'>
-      
-      {
-        shapeImages.map((shape, index) => (
-          <motion.img
-            key={index}
-            className={shape.classes}
-            src={shape.src}
-            alt={shape.alt}
-            initial={shape.initial}
-            animate={shape.animate}
-            transition={shape.transition}
-          />
-        ))
-      }
+      <div className='relative w-full border border-amber-400 max-w-6xl mx-auto px-6 md:flex md:items-center md:justify-between md:gap-x-5'>      
+        {
+          shapeImages.map((shape, index) =>
+            <motion.img
+              key={index}
+              className={shape.classes}
+              src={shape.src}
+              alt={shape.alt}
+              initial={shape.initial}
+              animate={shape.animate}
+              transition={shape.transition}
+            />
+          )
+        }
 
         <motion.div
           key={index}
@@ -135,7 +134,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
           transition={{ duration: 0.6 }}
-          className='md:w-1/2 text-center md:text-left z-20'
+          className='md:w-1/2 text-center md:text-left z-20 border-2 border-green-700'
         >
           <h1 className='text-8xl uppercase font-bold text-white leading-28'>
             {
@@ -157,12 +156,12 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.2 }}
           transition={{ duration: 1.2 }}
-          className='md:w-1/2 flex justify-center z-20'
+          className='md:w-1/2 flex justify-center z-20 border-2 border-slate-500'
         >
           <motion.img
             src={heroContents[index].image}
             alt='Food Image'
-            className='object-contain drop-shadow-lg -mb-48'
+            className='object-contain drop-shadow-lg -mb-48 border border-blue-600 w-4/5 md:w-7/8 lg:w-full'
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
           />
