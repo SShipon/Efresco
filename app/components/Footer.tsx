@@ -21,14 +21,14 @@ const foodItems = [
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#212121] text-white py-10">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-x-16">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-16">
         {/* Left Section */}
-        <div className="space-y-4 text-center md:text-left pr-5 md:border-r md:border-r-[#363636]">
+        <div className="space-y-4 pr-5 md:border-r md:border-r-[#363636]">
           <Image src='/logo-white.svg' alt='logo' width={182} height={45} />
           <p className="text-white leading-relaxed py-5">
             Temporibus autem quibusdam officiis debitis aut rerum necessitatibus saepe eveniet voluta repudiandae molestiae recusandae Itaquear rerum hic tenetur sapiente delectus
           </p>
-          <div className="flex justify-center md:justify-start gap-4 text-lg">
+          <div className="flex gap-4 text-lg">
             <Link href="#" className='border border-[#ffffff2b] w-10 h-10 flex flex-col justify-center items-center rounded-full hover:bg-[#d12525] hover:border-none'>
               <FaFacebookF />
             </Link>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="text-center md:text-left pr-5 md:border-r md:border-r-[#363636]">
+        <div className="pr-5 lg:border-r lg:border-r-[#363636]">
           <h3 className="text-xl font-semibold">Popular Food</h3>
           <ul className="grid grid-cols-2 gap-2 text-sm pt-8">
             {foodItems.map((food, index) => (
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="text-center md:text-left">
+        <div>
           <h3 className="text-xl font-semibold pb-4">Contact Us</h3>
           <p className='py-5'>1403 Washington Ave, New Orlea <br />ns, LA 70130, United States</p>
           <h4 className='text-lg font-bold'>

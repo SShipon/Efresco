@@ -63,7 +63,7 @@ export default function Navbar() {
       {/* <div className='lg:w-7/10 flex items-center lg:gap-x-5 border-3 border-green-700'> */}
       {/* <div className={`lg:flex lg:items-center lg:gap-x-5 ${menuOpen ? "block" : "hidden"} absolute top-20 left-0 w-full lg:relative lg:top-0 lg:w-auto bg-[#d12525] lg:bg-transparent`}> */}
       <div
-        className={`lg:flex lg:items-center lg:gap-x-5 absolute top-20 left-0 w-full lg:relative z-30 lg:top-0 lg:w-auto bg-[#d12525] lg:bg-transparent px-5 py-5 lg:p-0 transition-all duration-300 ease-in-out`}
+        className={`lg:flex lg:items-center lg:gap-x-5 absolute lg:relative top-20 right-0 w-full z-30 lg:top-0 lg:w-auto bg-[#d12525] lg:bg-transparent px-5 py-5 lg:p-0 transition-all duration-300 ease-in-out`}
       >
         {/* <ul className='flex lg:gap-x-8 uppercase'> */}
         <ul className={`lg:flex flex-col lg:flex-row items-center lg:gap-x-8 uppercase absolute right-5 lg:static z-30 w-36 lg:w-auto bg-white opacity-85 lg:opacity-100 text-[#d12525] lg:bg-[#d12525] lg:text-white ${menuOpen ? "block" : "hidden"}`}>
@@ -87,7 +87,7 @@ export default function Navbar() {
           </div>
 
           {/* <button className='flex items-center gap-x-1 xl:gap-x-2 uppercase border border-white px-3 xl:px-5 py-3 hover:bg-white hover:text-black cursor-pointer'> */}
-          <button className="hidden md:flex items-center gap-x-2 uppercase border border-white px-5 py-3 hover:bg-white hover:text-black cursor-pointer">
+          <button className="invisible md:visible hidden sm:flex items-center gap-x-2 uppercase border border-white px-5 py-3 hover:bg-white hover:text-black cursor-pointer">
             <TbTruckDelivery size={24} />
             <p>order now</p>
           </button>
@@ -102,7 +102,7 @@ export default function Navbar() {
           </div>
 
           {/* Login & Logout */}
-          <div className="mt-3 lg:mt-0 text-center">
+          <div className="text-center ml-20 sm:ml-0">
             {session ? (
               <>
                 <Link href="/dashboard" className="mr-4 block lg:inline">Dashboard</Link>
