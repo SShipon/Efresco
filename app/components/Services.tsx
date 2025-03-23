@@ -29,10 +29,24 @@ export default function Services() {
   ];
 
   return (
-    <section className='relative pt-100 pb-32'>
-      <div className="max-w-[1200px] mx-auto">
+    <section className='pt-100 pb-32'>
+      <div className="max-w-[1200px] mx-auto relative">
         {/* <div className='mx-auto relative'> */}
-          <Image src='/video-bg.jpg' alt='video-bg' width={1200} height={1200} className='absolute top-30' />
+          <Image
+            src='/video-bg.jpg'
+            alt='video-bg'
+            layout='responsive'
+            width={1200}
+            height={500}
+            // sizes='(max-width: 768px) 80vw, (max-width: 1200px) 80vw, 90vw'
+            className='absolute -top-50 sm:-top-70 md:-top-80 lg:-top-70'
+          />
+          {/* <img
+            src='video-bg.jpg'
+            alt='video-bg'
+            // className='w-full -mb-75'
+            className='w-full absolute -top-50 sm:-top-70 md:-top-80 lg:-top-70'
+          /> */}
         {/* </div> */}
       </div>
       <div className="min-h-screen text-white px-8 py-12 bg-[#d12525] bg-[url('/bg-shape.png')] bg-cover bg-center">

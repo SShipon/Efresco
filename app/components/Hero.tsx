@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
-import { title } from 'process';
 
 const heroContents = [
   {
@@ -111,10 +110,10 @@ export default function Hero() {
 
   return (
     // <section className="bg-[url('/hero-bg.jpg')] bg-cover bg-top relative w-full h-screen flex items-center justify-center">
-    <section className='bg-[#d12525] relative w-full min-h-screen flex items-center justify-center'>
+    <section className='bg-[#d12525] w-full min-h-screen xl:min-h-[70vh] flex items-center justify-center py-20'>
       {/* <div className='absolute inset-0'></div> */}
 
-      <div className='relative w-full max-w-6xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center lg:justify-between lg:gap-x-5'>
+      <div className='relative w-full max-w-6xl mx-auto px-6 lg:px-12 py-6 md:py-12 flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-x-5'>
         {
           shapeImages.map((shape, index) =>
             <motion.img
@@ -153,12 +152,12 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 1.2 }}
           transition={{ duration: 1.2 }}
-          className='w-full lg:w-1/2 flex justify-center z-20 py-5 sm:py-10 md:py-15 lg:py-0'
+          className='w-full lg:w-2/3 flex justify-center z-20 py-5 sm:py-10 md:py-15 lg:py-0'
         >
           <motion.img
             src={heroContents[index].image}
             alt='Food Image'
-            className='object-contain drop-shadow-lg lg:-mb-48 w-7/8 md:w-4/5 lg:w-full'
+            className='object-contain drop-shadow-lg lg:-mb-80 w-7/8 md:w-4/5 lg:w-full'
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
           />
