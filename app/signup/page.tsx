@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { HiEye, HiEyeOff } from "react-icons/hi"; // Importing icons for show/hide password
+import { HiEye, HiEyeOff } from "react-icons/hi"; 
 
 const signupSchema = z.object({
   name: z.string().min(3, "The name must be at least 3 characters long."),
@@ -18,7 +18,7 @@ const signupSchema = z.object({
 export default function SignupPage() {
   const router = useRouter();
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+  const [showPassword, setShowPassword] = useState(false); 
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(signupSchema),
   });
@@ -55,13 +55,13 @@ export default function SignupPage() {
         <div className="relative">
           <input
             {...register("password")}
-            type={showPassword ? "text" : "password"} // Toggle password visibility
+            type={showPassword ? "text" : "password"} 
             placeholder="Password"
             className="border p-2 rounded w-full"
           />
           <button
             type="button"
-            onClick={() => setShowPassword((prev) => !prev)} // Toggle the showPassword state
+            onClick={() => setShowPassword((prev) => !prev)} 
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
           >
             {showPassword ? (
@@ -78,7 +78,7 @@ export default function SignupPage() {
         </button>
       </form>
 
-      {/* ✅ Login এ যাওয়ার জন্য টগল বাটন */}
+    
       <p className="mt-4 text-center">
         Already have an account?
         <button
