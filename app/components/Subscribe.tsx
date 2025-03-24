@@ -22,9 +22,13 @@ export default function Subscribe() {
         </div>
         <div className='lg:w-1/2'>
           <form action="">
-            <div className='bg-white p-5 flex items-center max-w-4/5'>
+            <div className='bg-white p-5 flex gap-x-4 items-center max-w-4/5'>
             <FaEnvelope />
-              <input placeholder="Enter email address" type="email" />
+              <input
+                type="email"
+                placeholder="Enter Email Address"
+                className="outline-none w-full p-2"
+              />
             </div>
           </form>
           {/* <div ><i class="fas fa-envelope"></i></div> */}

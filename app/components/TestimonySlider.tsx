@@ -80,7 +80,7 @@ export default function TestimonySlider() {
               {[...Array(5)].map((_, i) => <FaStar key={i} color='#ffb936' />)}
             </div>
           </div>
-          <h3 className='text-3xl font-medium py-8 leading-tight'>
+          <h3 className='text-4xl font-medium py-8 leading-tight'>
             {testimonies[index].description}
           </h3>
           <div className='flex items-center gap-x-4 mt-8'>
