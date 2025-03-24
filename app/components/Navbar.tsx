@@ -75,11 +75,11 @@ export default function Navbar() {
         <div>
           {session ? (
             <>
-              <Link href="/dashboard" className="mr-4">Dashboard</Link>
+              <Link href="/dashboard" className="mr-4 text-lg font-semibold">Dashboard</Link>
               <button onClick={() => signOut()} className="bg-red-500 p-2 rounded">Logout</button>
             </>
           ) : (
-            <Link href="/login" className="bg-green-500 p-2 rounded">Login</Link>
+            <Link href="/login" className="bg-green-500 p-2 rounded ">Login</Link>
           )}
         </div>
       </div>
