@@ -49,8 +49,9 @@ export default function Navbar() {
         <Image
           width={150}
           height={50}
-          src='Asset-2.svg'
+          src='/Asset-2.svg'
           alt='logo'
+          className='relative z-40'
         />
       </Link>
 
@@ -81,13 +82,13 @@ export default function Navbar() {
         <div className='flex items-center gap-x-8 lg:gap-x-5 absolute -top-15 left-1/3 lg:static'>
           {/* Search & Cart */}
           {/* <div className='lg:pl-6 flex lg:gap-x-7'> */}
-          <div className='md:flex gap-x-5 mt-3 lg:mt-0 hidden'>
+          <div className='md:flex gap-x-5 mt-5 lg:mt-0 hidden'>
             <BiSearch size={24} />
             <BiCartAdd size={24} />
           </div>
 
           {/* <button className='flex items-center gap-x-1 xl:gap-x-2 uppercase border border-white px-3 xl:px-5 py-3 hover:bg-white hover:text-black cursor-pointer'> */}
-          <button className="invisible md:visible hidden sm:flex items-center gap-x-2 uppercase border border-white px-5 py-3 hover:bg-white hover:text-black cursor-pointer">
+          <button className="invisible md:visible hidden sm:flex items-center gap-x-2 uppercase border border-white px-5 py-3 mt-5 lg:mt-0 hover:bg-white hover:text-black cursor-pointer">
             <TbTruckDelivery size={24} />
             <p>order now</p>
           </button>
@@ -102,14 +103,14 @@ export default function Navbar() {
           </div>
 
           {/* Login & Logout */}
-          <div className="text-center ml-20 sm:ml-0">
+          <div className='text-center ml-20 sm:ml-0 mt-5 lg:mt-0'>
             {session ? (
               <>
-                <Link href="/dashboard" className="mr-4 block lg:inline">Dashboard</Link>
-                <button onClick={() => signOut()} className="bg-[#d12525] px-4 py-2 rounded block lg:inline">Logout</button>
+                <Link href='/dashboard' className='mr-4 block lg:inline'>Dashboard</Link>
+                <button onClick={() => signOut()} className='bg-[#d12525] px-4 py-2 rounded block lg:inline'>Logout</button>
               </>
             ) : (
-              <Link href="/login" className="bg-green-500 p-2 rounded block lg:inline">Login</Link>
+              <Link href='/login' className='bg-green-500 p-2 rounded block lg:inline'>Login</Link>
             )}
           </div>
         </div>
