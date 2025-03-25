@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-x-16">
         {/* Left Section */}
         <div className="space-y-4 pr-5 md:border-r md:border-r-[#363636]">
-          <Image src='/logo-white.svg' alt='logo' width={182} height={45} />
+          <Image src='/Asset-2.svg' alt='logo' width={182} height={45} />
           <p className="text-white leading-relaxed py-5">
             Temporibus autem quibusdam officiis debitis aut rerum necessitatibus saepe eveniet voluta repudiandae molestiae recusandae Itaquear rerum hic tenetur sapiente delectus
           </p>
