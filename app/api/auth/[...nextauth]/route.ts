@@ -21,9 +21,10 @@ const handler = NextAuth({
 
           if (res.data) {
             return {
+              id: res.data.id || res.data._id || crypto.randomUUID(), // ✅ Fixed: Ensure 'id' is present
               name: res.data.name,
               email: res.data.email,
-              role: res.data.role, // ✅ Ensure role is included
+              role: res.data.role,
             };
           }
           return null;
