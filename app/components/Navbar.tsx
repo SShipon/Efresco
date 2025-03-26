@@ -49,7 +49,7 @@ export default function Navbar() {
         <Image
           width={150}
           height={50}
-          src='logo-white.svg'
+          src='Asset-2.svg'
           alt='logo'
         />
       </Link>

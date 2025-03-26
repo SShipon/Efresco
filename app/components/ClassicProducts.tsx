@@ -31,7 +31,7 @@ export default function ClassicProducts() {
   ];
 
   return (
-    <section className='border-b border-b-[#d12525]'>
+    <section className='border-b border-b-[#d12525] mb-2 sm:mb-4 md:mb-8'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-x-4 max-w-[1200px] mx-auto'>
         {
           products.map((product, index) =>

@@ -15,7 +15,7 @@ const barlowCondensed = Barlow_Condensed({
 
 
 export const metadata: Metadata = {
-  title: "BD_Restaurant",
+  title: "EFRESCO",
   description: "",
 };
 
