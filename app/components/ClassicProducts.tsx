@@ -49,7 +49,7 @@ export default function ClassicProducts() {
                 order now <FaArrowRight size={20} />
               </button>
               <div className="bg-[url('/box.png')] bg-cover w-20 h-20 absolute left-1/4 sm:left-3/10 md:left-1/5 lg:left-3 top-12">
-                <h4 className='absolute left-3 top-6 text-white text-2xl font-semibold uppercase'>
+                <h4 className='pt-6 text-center text-white text-2xl font-semibold uppercase'>
                   {product.tag}
                 </h4>
               </div>
