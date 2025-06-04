@@ -9,7 +9,6 @@ import MarqueeTestimony from './components/Marquee-Testimony'
 import Testimonials from './components/Testimonials'
 import Services from './components/Services'
 import Subscribe from './components/Subscribe'
-import FoodSlider from './components/FoodSlider'
 
 export default function Home() {
   return (
@@ -26,7 +25,6 @@ export default function Home() {
       <Testimonials />
       <Services />
       <Subscribe />
-      <FoodSlider />
     </div>
   )
 }

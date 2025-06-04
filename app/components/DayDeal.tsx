@@ -1,6 +1,5 @@
 import { TbTruckDelivery } from "react-icons/tb";
 import ImageSlider from "./ImageSlider";
-// import Slider from "./Slider";
 
 export default function DayDeal() {
   return (
